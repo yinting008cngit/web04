@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles/style-20251022.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <form id="todoForm" aria-label="新增待辦表單">
+        <label for="todoText" class="visually-hidden">待辦事項</label>
+        <input id="todoText" name="todoText" type="text" placeholder="輸入待辦事項" required>
+
+        <label for="todoDate" class="visually-hidden">日期</label>
+        <input id="todoDate" name="todoDate" type="date" min="2021-01-01" max="2050-12-31">
+
+        <button type="submit">加入清單</button>
+    </form>
+
+    <div class="sort">
+        <button style="width: 200px; height: 30px;">依預定時間排序</button>
+    </div>
+
+<section id="todoList" class="todo-list" aria-live="polite"></section>
+</body>
+<script src="js/script20251022.js" defer></script>
+
+</html>

@@ -1,0 +1,335 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 無障礙隱藏（screen-reader 可見） */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0; padding: 0; margin: -1px;
+}
+
+body {
+  background: linear-gradient(90deg, #3552b1, #a81f1f);
+}
+
+i {
+  pointer-events: none;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+header h1 {
+  color: lightpink;
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Chrome, Safari, Edge, Opera */
+}
+form input,
+form button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  margin: 0.2rem;
+  box-shadow: inset 0px 0px 4px 4px #3d0955;
+}
+form input[type=number] {
+  width: 100px;
+  text-align: center;
+}
+form button {
+  cursor: pointer;
+  background-color: #4f0c55;
+  color: white;
+  border-radius: 8px;
+}
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+div.sort button {
+  cursor: pointer;
+  background-color: rgb(37, 206, 93);
+  color: white;
+  border: 0;
+  padding: 0.2rem 0.2rem;
+  font-size: 1rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section div.todo {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+  transition: all 0.2s ease;
+}
+section div.todo p {
+  background-color: #807ea0;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+}
+section div.todo p.todo-text {
+  width: 62%;
+}
+section div.todo p.todo-time {
+  width: 35%;
+  text-align: right;
+  padding-left: 1rem;
+}
+section div.todo button {
+  padding: 0.25rem 0.25rem;
+  font-size: 0.7rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 60%;
+  margin: 0px 4px;
+}
+section div.todo button.complete {
+  background-color: #3552b1;
+}
+section div.todo button.trash {
+  background-color: #a81f1f;
+}
+
+.done {
+  opacity: 0.7;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.5rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1rem;
+  }
+  header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1rem;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 2rem;
+  }
+  section div.todo {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+    transition: all 0.2s ease;
+  }
+  section div.todo p {
+    background-color: #420f52;
+    color: rgb(245, 160, 245);
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+  }
+  section div.todo p.todo-text {
+    width: 58%;
+  }
+  section div.todo p.todo-time {
+    width: 40%;
+    text-align: right;
+    padding-left: 0rem;
+  }
+  div.sort button {
+    cursor: pointer;
+    background-color: rgb(9, 63, 51);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.25rem 0.25rem;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style-20251022.css.map */
